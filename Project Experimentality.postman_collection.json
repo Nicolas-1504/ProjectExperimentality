@@ -1,0 +1,356 @@
+{
+	"info": {
+		"_postman_id": "489dde44-ca6b-4055-a525-8545242414f0",
+		"name": "Project Experimentality",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listar productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/productos/lista",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"lista"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear producto (Añadir imagenes en los campos imagen en body)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Blusa",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "Color negro",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "precioConDescuento",
+							"value": "15.05",
+							"type": "text"
+						},
+						{
+							"key": "porcentajeDescuento",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "paisDeVenta",
+							"value": "Colombia",
+							"type": "text"
+						},
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": []
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/productos/crear",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear producto sin imagenes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Blusa",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "Color negro",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "precioConDescuento",
+							"value": "15.05",
+							"type": "text"
+						},
+						{
+							"key": "porcentajeDescuento",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "paisDeVenta",
+							"value": "Colombia",
+							"type": "text"
+						},
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						},
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/productos/crear",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear producto con porcentaje de descuento mayor al del pais",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nombre",
+							"value": "Blusa",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "Color negro",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "precioConDescuento",
+							"value": "15.05",
+							"type": "text"
+						},
+						{
+							"key": "porcentajeDescuento",
+							"value": "60",
+							"type": "text"
+						},
+						{
+							"key": "paisDeVenta",
+							"value": "Colombia",
+							"type": "text"
+						},
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						},
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/productos/crear",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar producto por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/productos/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar producto",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "nombre",
+							"value": "Sombrero",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "Color Azul",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "20",
+							"type": "text"
+						},
+						{
+							"key": "precioConDescuento",
+							"value": "15.05",
+							"type": "text"
+						},
+						{
+							"key": "porcentajeDescuento",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "paisDeVenta",
+							"value": "Colombia",
+							"type": "text"
+						},
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "imagen",
+							"type": "file",
+							"src": []
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/productos/actualizar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"actualizar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
